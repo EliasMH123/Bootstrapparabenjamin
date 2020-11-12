@@ -1,0 +1,22 @@
+<div class="update">
+    <form>
+      <div class="form-group">
+        <label for="N1">CURSO</label>
+        <input type="email" class="form-control" id="N1"  [(ngModel)]="curso.nombre" placeholder="Nuevo Nombre" name="nombre">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">CREDITOS</label>
+        <input type="email" class="form-control" id="N2"  [(ngModel)]="curso.cr" placeholder="Nuevo N° Creditos" name="credito">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">HT</label>
+        <input type="email" class="form-control" id="N3"  [(ngModel)]="curso.ht" placeholder="Horas Teoricas" name="ht">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">HP</label>
+        <input type="email" class="form-control" id="N4"  [(ngModel)]="curso.hp" placeholder="Horas Practicas" name="hp">
+      </div>
+      <button color="primary" class="btn btn-success" (click)="modificarCurso()">Modificar</button>
+      <button type="button" class="btn btn-danger" routerLink="/listar">Cancelar</button>
+    </form>
+  </div>

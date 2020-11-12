@@ -1,0 +1,30 @@
+<div class="center">
+  <button type="button" routerLink="/curso/add" class="btn btn-success add"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">CURSO</th>
+      <th scope="col">CR</th>
+      <th scope="col">HT</th>
+      <th scope="col">HP</th>
+      <th scope="col">ESTADO</th>
+      <th scope="col">MODIFICAR</th>
+      <th scope="col">ELIMINAR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of cursos">
+      <td>{{curso.ID_CURSO}}</td>
+      <td>{{curso.NOMBRE}}</td>
+      <td>{{curso.CR}}</td>
+      <td>{{curso.HT}}</td>
+      <td>{{curso.HP}}</td>
+      <td>{{curso.ESTADO}}</td>
+      <td><button type="button" class="btn btn-info" [routerLink]="['/editar', curso.ID_CURSO]"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+      <td><button type="button" class="btn btn-danger" (click)="delCurso(curso.ID_CURSO)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+    </tr>
+  </tbody>
+</table>
